@@ -1,0 +1,318 @@
+body {
+        font-family: 'Montserrat', Arial, sans-serif;
+        margin:0;
+        z-index:0;
+        position:relative;
+}
+
+body::before {
+  content: "";
+  position: fixed; /* o absolute si prefieres */
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/foto-main.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* ajusta la transparencia */
+  z-index: -1; /* detrás del contenido */
+}
+
+
+.navbar{
+  height:10vh;
+  display:flex;
+  justify-content:space-around
+}
+
+.portada-consultora{
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-image: url('../img/foto-portada.jpg');
+    height: 120vh;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    position: relative;
+    transition: background-image 0.7s ease-in-out;
+    padding-top: 140px;
+    padding-left: 10px;
+}
+.arrow-btn {
+  z-index: 10;
+}
+/* En tu archivo CSS (style.css o similar) */
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#slide-content {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.fade-in-scale {
+  animation: fadeInScale 0.6s ease forwards;
+}
+
+.texto-1{
+    color:#f4f6fa;
+    font-size:60px;
+    font-weight:800;
+    text-decoration: dashed;
+}
+
+.texto-2{
+    color:#f4f6fa;
+    text-decoration: dashed;
+}
+
+.seccion-1{
+    background-image:url(../img/foto-seccion1.jpg);
+    background-size: cover;
+    height:80vh;
+    text-align:left;
+}
+
+.contenido-seccion-1{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #f4f6fa;
+}
+
+.flex-seccion-1{
+    margin-left:2rem;
+    text-align:left;
+}
+.button1{
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.seccion-2{
+    background-color:black;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items: center;
+    padding:10px;
+    height:80vh;
+}
+
+.boton{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.titulo-seccion-2{
+    text-align: center;
+    justify-content: center;
+    background-color:black;
+}
+
+.seccion-2-config{
+    background-color: black;
+}
+
+.card.full-bg {
+  position: relative;
+  overflow: hidden;
+  height: 380px; /* igual que Kibernum */
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card.full-bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+.card.full-bg:hover img {
+  transform: scale(1.05);
+}
+
+.card.full-bg .card-overlay {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.85) 75%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 1rem;
+}
+
+.card-overlay .card-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-overlay .card-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.card-overlay a.text-warning {
+  font-weight: 600;
+  color: #ffc107; /* color amarillo */
+  text-decoration: none;
+  font-size: 0.9rem;
+  align-self: flex-start;
+}
+
+.card-overlay a.text-warning:hover {
+  text-decoration: underline;
+}
+
+.card {
+    border: 2px solid #000;
+}
+.texto-3{
+    color:#0b111a;
+    font-size:70px;
+    font-weight:800;
+    text-decoration: dashed;
+}
+.texto-4{
+    color:#0b111a;
+}
+
+.seccion-3{
+  display: flex;
+  align-items: flex-start; /* Alinea texto e imagen arriba */
+  justify-content: flex-start; /* Todo pegado al inicio, sin separar mucho */
+  flex-wrap: wrap;
+  background-color:#0b111a;
+  padding:60px;
+  height:120vh;
+  gap: 30px; /* Espacio entre texto e imagen */
+}
+
+.seccion-4{
+  background-color: #0b111a;
+  color: white;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.seccion-5{
+  color: #0b111a;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:100vh;
+}
+
+
+.seccion-7{
+  background-color:whitesmoke;
+  color:black;
+  padding: 20px;
+}
+
+.seccion-7 h2.texto-1 {
+  color:black;             /*#00c8ff /* color del título */
+  font-size: 32px;
+}
+
+.seccion-7 p.texto-2 {
+  color: #ccc; /* color del texto del párrafo */
+  font-size: 18px;
+}
+
+.seccion-7 .form-label {
+  color: #ddd; /* color de las etiquetas "Nombre", "Correo", etc. */
+}
+@media (max-width: 768px) {
+  .seccion-3 { 
+    padding: 40px 20px;
+    text-align: center; 
+    }
+  .texto-1 {
+    font-size: 40px;
+  }
+
+  .texto-2 {
+    font-size: 16px;
+  }
+
+  .seccion-1 {
+    height: auto;
+    padding: 40px 20px;
+    background-position: center;
+  }
+
+  .contenido-seccion-1 {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .texto-3 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .texto-4 {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .seccion-3 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .seccion-3 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card.full-bg {
+    height: auto;
+  }
+
+  .card.full-bg .card-overlay {
+    padding: 1rem;
+  }
+
+}
+
