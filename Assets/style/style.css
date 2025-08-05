@@ -1,0 +1,523 @@
+body {
+        font-family: 'Montserrat', Arial, sans-serif;
+        margin:0;
+        z-index:0;
+        position:relative;
+}
+
+body::before {
+  content: "";
+  position: fixed; /* o absolute si prefieres */
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/foto-main.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3; /* ajusta la transparencia */
+  z-index: -1; /* detrás del contenido */
+}
+
+
+.navbar{
+  height:10vh;
+  display:flex;
+  justify-content:space-around
+}
+
+.portada-consultora{
+    display:flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-image: url('../img/foto-portada.jpg');
+    height: 120vh;
+    background-size: cover;
+    background-position: center;
+    text-align: left;
+    position: relative;
+    transition: background-image 0.7s ease-in-out;
+    padding-top: 140px;
+    padding-left: 10px;
+}
+.arrow-btn {
+  z-index: 10;
+}
+/* En tu archivo CSS (style.css o similar) */
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#slide-content {
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.fade-in-scale {
+  animation: fadeInScale 0.6s ease forwards;
+}
+
+.texto-1{
+    color:#f4f6fa;
+    font-size:60px;
+    font-weight:800;
+    text-decoration: dashed;
+}
+
+.texto-2{
+    color:#f4f6fa;
+    text-decoration: dashed;
+}
+
+.seccion-1{
+    background-image:url(../img/foto-seccion1.jpg);
+    background-size: cover;
+    height:80vh;
+    text-align:left;
+}
+
+.contenido-seccion-1{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #f4f6fa;
+}
+
+.flex-seccion-1{
+    margin-left:2rem;
+    text-align:left;
+}
+.button1{
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.seccion-2{
+    background-color:black;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    text-align:center;
+    align-items:center;
+    padding:10px;
+    height:80vh;
+}
+
+.seccion-2-config .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* centrado vertical */
+  align-items: center;      /* centrado horizontal */
+  text-align: center;       /* centra el texto */
+  min-height: 300px;        /* para que se note el centrado vertical */
+  padding: 20px;
+}
+
+.seccion-2-slogan{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: #f4f6fa;
+    margin-left: 60px;
+
+}
+
+.boton{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.titulo-seccion-2{
+    text-align: center;
+    justify-content: center;
+    background-color:black;
+}
+
+.seccion-2-config{
+    background-color: black;
+}
+
+.card.full-bg {
+  position: relative;
+  overflow: hidden;
+  height: 380px; /* igual que Kibernum */
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card.full-bg img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+.card.full-bg:hover img {
+  transform: scale(1.05);
+}
+
+.card.full-bg .card-overlay {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.85) 75%,
+    rgba(0, 0, 0, 0.95) 100%
+  );
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 1rem;
+}
+
+.card-overlay .card-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-overlay .card-text {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  color: #e0e0e0;
+}
+
+.card-overlay a.text-warning {
+  font-weight: 600;
+  color: #ffc107; /* color amarillo */
+  text-decoration: none;
+  font-size: 0.9rem;
+  align-self: flex-start;
+}
+
+.card-overlay a.text-warning:hover {
+  text-decoration: underline;
+}
+
+.card {
+    border: 2px solid #000;
+}
+
+.card.h-100 {
+  display: flex;
+  flex-direction: column;
+  height: 100%;           /* Ocupa todo el alto de la columna */
+  max-height: 500px;      /* Ajusta este valor según tu preferencia */
+}
+
+.card-img-top {
+  height: 160px;          /* Ajusta según tu preferencia */
+  object-fit: cover;
+}
+
+.card.h-100 img {
+  height: 180px; /* Ajusta según tu preferencia */
+  object-fit: cover;
+}
+
+.card.h-100 .card-body:first-of-type {
+  flex-shrink: 0;
+}
+
+.card.h-100 .list-group {
+  flex: 1 1 auto;
+}
+
+.card.h-100 .card-body:last-of-type {
+  margin-top: auto;
+}
+.texto-3{
+    color:#0b111a;
+    font-size:70px;
+    font-weight:800;
+    text-decoration: dashed;
+}
+.texto-4{
+    color:#0b111a;
+}
+
+.seccion-3{
+  display: flex;
+  align-items: flex-start; /* Alinea texto e imagen arriba */
+  justify-content: flex-start; /* Todo pegado al inicio, sin separar mucho */
+  flex-wrap: wrap;
+  background-color:#0b111a;
+  padding:60px;
+  height:120vh;
+  gap: 30px; /* Espacio entre texto e imagen */
+}
+
+.seccion-4{
+  background-color: #0b111a;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 120vh;
+
+}
+
+/* Asegura que cada card tenga altura completa y sus hijos se distribuyan bien */
+.seccion-4 .card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Muy importante */
+  max-width: 300px;
+  margin: 0 auto;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  background-color: #ffffff;
+}
+
+/* Imagen fija arriba */
+.seccion-4 .card img {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+/* El cuerpo crece para ocupar espacio */
+.seccion-4 .card-body {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+
+.list-group {
+  flex: 1 1 auto;
+  margin-bottom: 0;
+}
+
+.card-img-top {
+  height: 160px;          /* Ajusta según tu preferencia */
+  object-fit: cover;
+}
+.card-body:last-of-type {
+  margin-top: auto;
+  padding-bottom: 1rem;
+}
+/* El título con espacio controlado */
+.seccion-4 .card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Lista con espaciado más compacto */
+.seccion-4 .list-group-item {
+  font-size: 0.85rem;
+  padding: 0.75rem 1rem;
+  line-height: 1.3;
+}
+
+
+.seccion-5{
+  color: #f4f6fa;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height:50vh;
+  text-align:center;
+}
+
+
+.icons {
+  display: flex;
+  justify-content: space-between; /* Distribuye con espacios iguales entre íconos */
+  align-items: center;
+  max-width: 500px; /* Ajusta según espacio disponible */
+  margin-top: 20px;
+  gap: 15px; /* espacio entre íconos (opcional) */
+}
+
+.seccion-6 {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.seccion-6 h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.seccion-6 p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.pasos {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-direction:column;
+}
+
+.pasos {
+  position: relative;
+  margin: 40px auto;
+  padding: 20px 0;
+  width: 300px;
+  border-left: 3px solid #2196f3;
+}
+
+.paso {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 30px;
+}
+
+.circle {
+  position: absolute;
+  top: 0;
+  left: -17px;
+  background-color: #2196f3;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.paso p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.seccion-7 {
+  background-color:#FFFFFF;
+  display:Flex;
+  align-items:center;
+  flex-direction:column;
+  gap:20px;
+  padding: 40px;
+}
+
+.seccion-8{
+  background-color:#f4f4f4;
+  color:black;
+  padding: 20px;
+  display: flex;
+  flex-direction:row;
+}
+
+.seccion-8 h2.texto-1 {
+  color:black;             /*#00c8ff /* color del título */
+  font-size: 32px;
+}
+
+.seccion-8 p.texto-2 {
+  color: #ccc; /* color del texto del párrafo */
+  font-size: 18px;
+}
+
+.seccion-8 .form-label {
+  color: #ddd; /* color de las etiquetas "Nombre", "Correo", etc. */
+}
+@media (max-width: 768px) {
+  .seccion-3 { 
+    padding: 40px 20px;
+    text-align: center; 
+    }
+  .texto-1 {
+    font-size: 40px;
+  }
+
+  .texto-2 {
+    font-size: 16px;
+  }
+
+  .seccion-1 {
+    height: auto;
+    padding: 40px 20px;
+    background-position: center;
+  }
+
+  .contenido-seccion-1 {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .texto-3 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .texto-4 {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .seccion-3 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .seccion-3 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card.full-bg {
+    height: auto;
+  }
+
+  .card.full-bg .card-overlay {
+    padding: 1rem;
+  }
+
+}
+
+ .fila-flex {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .campo {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .textos-contacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
